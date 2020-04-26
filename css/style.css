@@ -1,0 +1,8 @@
+@import url(./default.css);
+#canvasDiv {
+  margin: auto;
+}
+
+#canvasDiv canvas {
+  position: absolute;
+}
