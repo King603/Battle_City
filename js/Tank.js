@@ -1,9 +1,10 @@
 import { Bullet } from "./Bullet.js";
 import { CrackAnimation } from "./CrackAnimation.js";
-import { UP, DOWN, LEFT, RIGHT, AUDIO, CRACK_TYPE } from "./const.js";
+import { DIR, AUDIO, CRACK_TYPE } from "./const.js";
 import { crackArray, bulletArray, emenyStopTime, map } from "./main.js";
 import { tankMapCollision } from "./Collision.js";
 // tank.js
+let { UP, DOWN, LEFT, RIGHT } = DIR;
 /**
  * 坦克基类
  * @returns

@@ -1,6 +1,6 @@
 import { Num } from "./Num.js";
 import { LEVEL } from "./LEVEL.js";
-import { SCREEN, IMAGE, POS, WALL, GRID, WATER, ICE, GRASS, HOME } from "./const.js";
+import { SCREEN, IMAGE, POS, MAP } from "./const.js";
 import { maxEnemy } from "./main.js";
 // map.js
 export class Map {
@@ -35,6 +35,7 @@ export class Map {
     this.wallCtx.fillStyle = "#000";
     this.wallCtx.fillRect(this.offsetX, this.offsetY, this.mapWidth, this.mapHeight); // 主游戏区
     this.grassCtx.clearRect(0, 0, SCREEN.WIDTH, SCREEN.HEIGHT);
+    let { WALL, GRID, WATER, ICE, GRASS, HOME } = MAP;
     for (let y = 0; y < this.hTileCount; y++) {
       for (let x = 0; x < this.wTileCount; x++) {
         let data = [
@@ -170,4 +171,3 @@ export class Map {
     );
   }
 }
-

@@ -1,5 +1,5 @@
 import { CrackAnimation } from "./CrackAnimation.js";
-import { IMAGE, POS, UP, DOWN, LEFT, RIGHT, CRACK_TYPE, BULLET_TYPE, AUDIO } from "./const.js";
+import { IMAGE, POS, DIR, CRACK_TYPE, BULLET_TYPE, AUDIO } from "./const.js";
 import { bulletArray, enemyArray, player, map, crackArray } from "./main.js";
 import { CheckIntersect, bulletMapCollision } from "./Collision.js";
 // buttet.js
@@ -31,6 +31,7 @@ export class Bullet {
     this.move();
   }
   move() {
+    let { UP, DOWN, LEFT, RIGHT } = DIR;
     switch (this.dir) {
       case UP: this.y -= this.speed; break;
       case DOWN: this.y += this.speed; break;
@@ -107,4 +108,3 @@ export class Bullet {
     this.owner.isAI || AUDIO.DESTROY.BULLET.play();
   }
 }
-

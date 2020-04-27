@@ -32,4 +32,3 @@ export class CrackAnimation {
       this.times <= 0 && (this.isOver = !0);
   }
 }
-

@@ -54,4 +54,3 @@ export class Stage {
     this.temp += this.drawHeigth * this.dir;
   }
 }
-

@@ -1,5 +1,5 @@
 import { Tank } from "./Tank.js";
-import { IMAGE, POS, AUDIO, CRACK_TYPE, UP } from "./const.js";
+import { IMAGE, POS, AUDIO, CRACK_TYPE, DIR } from "./const.js";
 import { crackArray, map } from "./main.js";
 import { CrackAnimation } from "./CrackAnimation.js";
 /**
@@ -53,7 +53,7 @@ export class PlayTank extends Tank {
   }
   renascenc(player) {
     this.lives--;
-    this.dir = UP;
+    this.dir = DIR.UP;
     this.isProtected = !0;
     this.protectedTime = 500;
     this.isDestroyed = !1;

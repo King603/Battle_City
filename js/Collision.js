@@ -1,6 +1,7 @@
-import { UP, DOWN, LEFT, RIGHT, WALL, GRID, WATER, HOME, ANOTHREHOME } from "./const.js";
+import { DIR, MAP } from "./const.js";
 import { isGameOver, map } from "./main.js";
 // Collision.js
+let { UP, DOWN, LEFT, RIGHT } = DIR;
 /**
  * 检测2个物体是否碰撞
  * @param object1 物体1
@@ -66,6 +67,7 @@ export function tankMapCollision(tank, mapObj) {
   }
   if (rowIndex >= mapObj.hTileCount || rowIndex < 0 || colIndex >= mapObj.wTileCount || colIndex < 0)
     return !0;
+  let { WALL, GRID, WATER, HOME, ANOTHREHOME } = MAP;
   switch (tank.dir) {
     case UP: case DOWN:
       let tempWidth = parseInt(tank.tempX - map.offsetX - colIndex * mapObj.tileSize + tank.size - overlap); // 去除重叠部分

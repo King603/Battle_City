@@ -1,5 +1,5 @@
 import { enemyArray, player, emenyStopTime, map, homeProtectedTime } from "./main.js";
-import { IMAGE, POS, AUDIO, GRID } from "./const.js";
+import { IMAGE, POS, AUDIO, MAP } from "./const.js";
 import { CheckIntersect } from "./Collision.js";
 // prop.js
 export class Prop {
@@ -73,7 +73,7 @@ export class Prop {
             [24, 14],
             [25, 11],
             [25, 14]
-          ], GRID);
+          ], MAP.GRID);
           homeProtectedTime = 500;
           break;
         case 3:
@@ -91,4 +91,3 @@ export class Prop {
     }
   }
 }
-

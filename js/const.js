@@ -57,18 +57,22 @@ export const GAME_STATE = {
   WIN: 4,
 };
 /**************地图块*****************/
-export const WALL = 1;
-export const GRID = 2;
-export const GRASS = 3;
-export const WATER = 4;
-export const ICE = 5;
-export const HOME = 9;
-export const ANOTHREHOME = 8;
+export const MAP = {
+  WALL: 1,
+  GRID: 2,
+  GRASS: 3,
+  WATER: 4,
+  ICE: 5,
+  HOME: 9,
+  ANOTHREHOME: 8,
+}
 /**************坦克及子弹的四个方向*****************/
-export const UP = 0;
-export const DOWN = 1;
-export const LEFT = 2;
-export const RIGHT = 3;
+export const DIR = {
+  UP: 0,
+  DOWN: 1,
+  LEFT: 2,
+  RIGHT: 3,
+}
 /**************坦克及子弹的四个方向*****************/
 export const ENEMY_LOCATION = [192, 0, 384]; //相对与主游戏区
 /**************子弹类型*****************/

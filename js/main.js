@@ -6,7 +6,7 @@ import { Enemy1 } from "./Enemy1.js";
 import { Enemy2 } from "./Enemy2.js";
 import { Enemy3 } from "./Enemy3.js";
 import { Prop } from "./Prop.js";
-import { GAME_STATE, SCREEN, ENEMY_LOCATION, WALL, DOWN, UP, LEFT, RIGHT, BULLET_TYPE } from "./const.js";
+import { GAME_STATE, SCREEN, ENEMY_LOCATION, MAP, DIR, BULLET_TYPE } from "./const.js";
 import { keyboard } from "./Keyboard.js";
 // main.js
 export let ctx = {};
@@ -159,6 +159,7 @@ function keyEvent() {
   setEvent(player[0], w, s, a, d);
   setEvent(player[1], up, down, left, right);
   function setEvent(player, up, down, left, right) {
+    let { UP, DOWN, LEFT, RIGHT } = DIR;
     switch (!0) {
       case keys.contain(up): setMove(UP); break;
       case keys.contain(down): setMove(DOWN); break;
@@ -185,7 +186,7 @@ function addEnemyTank() {
   }
   obj.x = ENEMY_LOCATION[parseInt(Math.random() * 3)] + map.offsetX;
   obj.y = map.offsetY;
-  obj.dir = DOWN;
+  obj.dir = DIR.DOWN;
   enemyArray[enemyArray.length] = obj;
   // 更新地图右侧坦克数
   map.clearEnemyNum(maxEnemy, appearEnemy);
@@ -298,5 +299,5 @@ function homeNoProtected() {
     [24, 14],
     [25, 11],
     [25, 14]
-  ], WALL);
+  ], MAP.WALL);
 };
