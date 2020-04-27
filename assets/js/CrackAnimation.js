@@ -1,5 +1,5 @@
 import { CRACK_TYPE, IMAGE, POS } from "./const.js";
-// crackAnimation.js
+
 export default class {
   times = 0;
   isOver = !1;

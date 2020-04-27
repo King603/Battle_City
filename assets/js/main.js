@@ -8,7 +8,7 @@ import Enemy3 from "./Enemy3.js";
 import Prop from "./Prop.js";
 import { GAME_STATE, SCREEN, ENEMY_LOCATION, MAP, DIR, BULLET_TYPE } from "./const.js";
 import keyboard from "./Keyboard.js";
-// main.js
+
 export let ctx = {};
 export let menu = null;// 菜单
 export let stage = null;// 舞台
@@ -241,7 +241,6 @@ function drawCrack() {
     }
   }
 }
-
 
 function gameOver() {
   ctx.over.clearRect(0, 0, SCREEN.WIDTH, SCREEN.HEIGHT);

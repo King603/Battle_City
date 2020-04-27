@@ -1,5 +1,5 @@
 import { IMAGE, POS } from "./const.js";
-// num.js
+
 export default class {
   constructor(context) {
     this.ctx = context;

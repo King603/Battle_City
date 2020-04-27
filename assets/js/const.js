@@ -1,16 +1,14 @@
-// const.js
-/**
- * 静态变量
- */
+// 静态变量
 /**************屏幕属性*****************/
 export const SCREEN = {
   WIDTH: 512,
   HEIGHT: 448,
 };
 /**************图片资源*****************/
+let image_src = "public/images/";
 export const IMAGE = {
-  MENU: getImg("public/images/menu.gif"),
-  RESOURCE: getImg("public/images/tankAll.gif")
+  MENU: getImg(image_src + "menu.gif"),
+  RESOURCE: getImg(image_src + "tankAll.gif")
 };
 function getImg(href) {
   let img = new Image();
@@ -37,16 +35,17 @@ POS.bulletBomb = [320, 0];
 POS.over = [384, 64];
 POS.prop = [256, 110];
 /**************声音资源*****************/
+let audio_src = "public/audio/";
 export const AUDIO = {
-  START: new Audio("public/audio/start.mp3"),
+  START: new Audio(audio_src + "start.mp3"),
   DESTROY: {
-    BULLET: new Audio("public/audio/bulletCrack.mp3"),
-    TANK: new Audio("public/audio/tankCrack.mp3"),
-    PLAYER: new Audio("public/audio/playerCrack.mp3")
+    BULLET: new Audio(audio_src + "bulletCrack.mp3"),
+    TANK: new Audio(audio_src + "tankCrack.mp3"),
+    PLAYER: new Audio(audio_src + "playerCrack.mp3")
   },
-  MOVE: new Audio("public/audio/move.mp3"),
-  ATTACK: new Audio("public/audio/attack.mp3"),
-  PROP: new Audio("public/audio/prop.mp3")
+  MOVE: new Audio(audio_src + "move.mp3"),
+  ATTACK: new Audio(audio_src + "attack.mp3"),
+  PROP: new Audio(audio_src + "prop.mp3")
 };
 /**************游戏状态*****************/
 export const GAME_STATE = {

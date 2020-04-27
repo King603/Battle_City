@@ -2,7 +2,7 @@ import CrackAnimation from "./CrackAnimation.js";
 import { IMAGE, POS, DIR, CRACK_TYPE, BULLET_TYPE, AUDIO } from "./const.js";
 import { bulletArray, enemyArray, player, map, crackArray } from "./main.js";
 import { CheckIntersect, bulletMapCollision } from "./Collision.js";
-// buttet.js
+
 export default class {
   constructor(context, owner, type, dir) {
     this.ctx = context;

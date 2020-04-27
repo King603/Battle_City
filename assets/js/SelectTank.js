@@ -1,8 +1,6 @@
 import Tank from "./Tank.js";
-/**
- * 菜单选择坦克
- * @returns
- */
+
+// 菜单选择坦克
 export default class extends Tank {
   constructor() {
     super();

@@ -1,19 +1,16 @@
 import { enemyArray, player, emenyStopTime, map, homeProtectedTime } from "./main.js";
 import { IMAGE, POS, AUDIO, MAP } from "./const.js";
 import { CheckIntersect } from "./Collision.js";
-// prop.js
+
 export default class {
   constructor(context) {
     this.ctx = context;
   }
   x = 0;
   y = 0;
-  // duration = 600;
-  // type = 0;
   hit = !1;
   width = 30;
   height = 28;
-  // isDestroyed = !1;
   size = 28;
   init() {
     this.ctx.clearRect(this.x, this.y, this.width, this.height);
@@ -64,22 +61,12 @@ export default class {
           emenyStopTime = 500;
           break;
         case 2:
-          map.updateMap([
-            [23, 11],
-            [23, 12],
-            [23, 13],
-            [23, 14],
-            [24, 11],
-            [24, 14],
-            [25, 11],
-            [25, 14]
-          ], MAP.GRID);
+          map.updateMap([[23, 11], [23, 12], [23, 13], [23, 14], [24, 11], [24, 14], [25, 11], [25, 14]], MAP.GRID);
           homeProtectedTime = 500;
           break;
         case 3:
-          if (enemyArray != null || enemyArray.length > 0)
-            for (let i = 0; i < enemyArray.length; i++)
-              enemyArray[i].distroy();
+          if (enemyArray != null || enemyArray.length > 0) 
+            enemyArray.forEach(enemy => enemy.distroy());
           break;
         case 4:
           break;

@@ -2,7 +2,7 @@ import Num from "./Num.js";
 import LEVEL from "./LEVEL.js";
 import { SCREEN, IMAGE, POS, MAP } from "./const.js";
 import { maxEnemy } from "./main.js";
-// map.js
+
 export default class {
   constructor(wCtx, gCtx) {
     this.wallCtx = wCtx;

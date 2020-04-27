@@ -12,11 +12,11 @@ export default class extends Tank {
     super();
     this.ctx = context;
   }
-  lives = 3; //生命值
-  isProtected = !0; //是否受保护
-  protectedTime = 500; //保护时间
-  offsetX = 0; //坦克2与坦克1的距离
-  speed = 2; //坦克的速度
+  lives = 3; // 生命值
+  isProtected = !0; // 是否受保护
+  protectedTime = 500; // 保护时间
+  offsetX = 0; // 坦克2与坦克1的距离
+  speed = 2; // 坦克的速度
   draw() {
     this.hit = !1;
     this.ctx.drawImage(

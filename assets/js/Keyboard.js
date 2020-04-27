@@ -1,7 +1,4 @@
-// keyboard.js
-/**
- * 键盘按钮
- */
+// 键盘按钮
 export default new class {
   UP = 38;
   DOWN = 40;

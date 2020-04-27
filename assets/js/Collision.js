@@ -1,6 +1,6 @@
 import { DIR, MAP } from "./const.js";
 import { isGameOver, map } from "./main.js";
-// Collision.js
+
 let { UP, DOWN, LEFT, RIGHT } = DIR;
 let { WALL, GRID, WATER, HOME, ANOTHREHOME } = MAP;
 /**

@@ -3,12 +3,9 @@ import CrackAnimation from "./CrackAnimation.js";
 import { DIR, AUDIO, CRACK_TYPE } from "./const.js";
 import { crackArray, bulletArray, emenyStopTime, map } from "./main.js";
 import { tankMapCollision } from "./Collision.js";
-// tank.js
+
 let { UP, DOWN, LEFT, RIGHT } = DIR;
-/**
- * 坦克基类
- * @returns
- */
+// 坦克基类
 export default class {
   x = 0;
   y = 0;
