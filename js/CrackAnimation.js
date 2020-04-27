@@ -1,6 +1,6 @@
 import { CRACK_TYPE, IMAGE, POS } from "./const.js";
 // crackAnimation.js
-export class CrackAnimation {
+export default class {
   times = 0;
   isOver = !1;
   tempDir = 1;

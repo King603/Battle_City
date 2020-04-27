@@ -1,10 +1,10 @@
 import { SCREEN, IMAGE, POS } from "./const.js";
-import { SelectTank } from "./SelectTank.js";
+import SelectTank from "./SelectTank.js";
 // menu.js
 /**
  * 游戏开始菜单
  */
-export class Menu {
+export default class {
   constructor(context) {
     this.ctx = context;
   }

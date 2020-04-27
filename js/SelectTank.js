@@ -1,9 +1,9 @@
-import { Tank } from "./Tank.js";
+import Tank from "./Tank.js";
 /**
  * 菜单选择坦克
  * @returns
  */
-export class SelectTank extends Tank {
+export default class extends Tank {
   constructor() {
     super();
   }

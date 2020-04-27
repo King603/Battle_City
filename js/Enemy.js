@@ -1,10 +1,10 @@
-import { Tank } from "./Tank.js";
+import Tank from "./Tank.js";
 import { IMAGE, POS } from "./const.js";
 /**
  * 敌方坦克父类
  * @param context
  */
-export class Enemy extends Tank {
+export default class extends Tank {
   constructor(context) {
     super();
     this.ctx = context;

@@ -1,13 +1,13 @@
-import { Menu } from "./Menu.js";
-import { Stage } from "./Stage.js";
-import { Map } from "./Map.js";
-import { PlayTank } from "./PlayTank.js";
-import { Enemy1 } from "./Enemy1.js";
-import { Enemy2 } from "./Enemy2.js";
-import { Enemy3 } from "./Enemy3.js";
-import { Prop } from "./Prop.js";
+import Menu from "./Menu.js";
+import Stage from "./Stage.js";
+import Map from "./Map.js";
+import PlayTank from "./PlayTank.js";
+import Enemy1 from "./Enemy1.js";
+import Enemy2 from "./Enemy2.js";
+import Enemy3 from "./Enemy3.js";
+import Prop from "./Prop.js";
 import { GAME_STATE, SCREEN, ENEMY_LOCATION, MAP, DIR, BULLET_TYPE } from "./const.js";
-import { keyboard } from "./Keyboard.js";
+import keyboard from "./Keyboard.js";
 // main.js
 export let ctx = {};
 export let menu = null;// 菜单
@@ -256,8 +256,7 @@ function gameOver() {
 }
 
 function nextLevel() {
-  level++;
-  level = level % 21;
+  level = ++level % 21;
   initObject();
   //只有一个玩家
   menu.playNum == 1 && (player[1].lives = 0);
@@ -266,8 +265,7 @@ function nextLevel() {
 }
 
 function preLevel() {
-  level--;
-  level == 0 && (level = 21);
+  --level == 0 && (level = 21);
   initObject();
   //只有一个玩家
   menu.playNum == 1 && (player[1].lives = 0);
@@ -290,14 +288,5 @@ function drawProp() {
 }
 
 function homeNoProtected() {
-  map.updateMap([
-    [23, 11],
-    [23, 12],
-    [23, 13],
-    [23, 14],
-    [24, 11],
-    [24, 14],
-    [25, 11],
-    [25, 14]
-  ], MAP.WALL);
+  map.updateMap([[23, 11], [23, 12], [23, 13], [23, 14], [24, 11], [24, 14], [25, 11], [25, 14]], MAP.WALL);
 };

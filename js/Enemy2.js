@@ -1,11 +1,11 @@
-import { Enemy } from "./Enemy.js";
+import Enemy from "./Enemy.js";
 import { POS } from "./const.js";
 /**
  * 敌方坦克2
  * @param context 画坦克的画布
  * @returns
  */
-export class Enemy2 extends Enemy {
+export default class extends Enemy {
   constructor(context) {
     super(context);
   }

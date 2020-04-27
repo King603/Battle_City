@@ -2,7 +2,7 @@
 /**
  * 键盘按钮
  */
-export let keyboard = new class {
+export default new class {
   UP = 38;
   DOWN = 40;
   RIGHT = 39;
@@ -10,9 +10,16 @@ export let keyboard = new class {
 
   SPACE = 32;
   TAB = 9;
+  SHIFT = 16;
   ENTER = 13;
   CTRL = 17;
   ALT = 18;
+  ESC = 27;
+
+  HOME = 36;
+  END = 35;
+  PAGE_UP = 33;
+  PAGE_DOWN = 34;
 
   Num0 = 48;
   Num1 = 49;
@@ -51,4 +58,37 @@ export let keyboard = new class {
   X = 88;
   Y = 89;
   Z = 90;
+
+  SMALL_0 = 96;
+  SMALL_1 = 97;
+  SMALL_2 = 98;
+  SMALL_3 = 99;
+  SMALL_4 = 100;
+  SMALL_5 = 101;
+  SMALL_6 = 102;
+  SMALL_7 = 103;
+  SMALL_8 = 104;
+  SMALL_9 = 105;
+
+  "*" = 106;
+  "+" = 107;
+  "-" = 109;
+  "." = 110;
+  "/" = 111;
+
+  F1 = 112;
+  F2 = 113;
+  F3 = 114;
+
+  F4 = 115;
+  F5 = 116;
+  F6 = 117;
+
+  F7 = 118;
+  F8 = 119;
+  F9 = 120;
+
+  F10 = 121;
+  F11 = 122;
+  F12 = 123;
 }();

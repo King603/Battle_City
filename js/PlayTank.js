@@ -1,13 +1,13 @@
-import { Tank } from "./Tank.js";
+import Tank from "./Tank.js";
 import { IMAGE, POS, AUDIO, CRACK_TYPE, DIR } from "./const.js";
 import { crackArray, map } from "./main.js";
-import { CrackAnimation } from "./CrackAnimation.js";
+import CrackAnimation from "./CrackAnimation.js";
 /**
  * 玩家坦克
  * @param context 画坦克的画布
  * @returns
  */
-export class PlayTank extends Tank {
+export default class extends Tank {
   constructor(context) {
     super();
     this.ctx = context;

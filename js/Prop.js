@@ -2,7 +2,7 @@ import { enemyArray, player, emenyStopTime, map, homeProtectedTime } from "./mai
 import { IMAGE, POS, AUDIO, MAP } from "./const.js";
 import { CheckIntersect } from "./Collision.js";
 // prop.js
-export class Prop {
+export default class {
   constructor(context) {
     this.ctx = context;
   }

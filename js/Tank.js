@@ -1,5 +1,5 @@
-import { Bullet } from "./Bullet.js";
-import { CrackAnimation } from "./CrackAnimation.js";
+import Bullet from "./Bullet.js";
+import CrackAnimation from "./CrackAnimation.js";
 import { DIR, AUDIO, CRACK_TYPE } from "./const.js";
 import { crackArray, bulletArray, emenyStopTime, map } from "./main.js";
 import { tankMapCollision } from "./Collision.js";
@@ -9,7 +9,7 @@ let { UP, DOWN, LEFT, RIGHT } = DIR;
  * 坦克基类
  * @returns
  */
-export class Tank {
+export default class {
   x = 0;
   y = 0;
   hit = !1; // 是否碰到墙或者坦克

@@ -1,6 +1,6 @@
 import { IMAGE, POS } from "./const.js";
 // num.js
-export class Num {
+export default class {
   constructor(context) {
     this.ctx = context;
     this.size = 14;

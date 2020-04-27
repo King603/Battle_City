@@ -1,8 +1,8 @@
-import { Num } from "./Num.js";
+import Num from "./Num.js";
 import { IMAGE, POS, AUDIO } from "./const.js";
 import { initMap } from "./main.js";
 // stage.js
-export class Stage {
+export default class {
   constructor(context, level) {
     this.ctx = context;
     this.level = level;
