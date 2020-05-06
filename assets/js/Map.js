@@ -4,6 +4,11 @@ import { SCREEN, IMAGE, POS, MAP } from "./const.js";
 import { maxEnemy } from "./main.js";
 
 export default class {
+  /**
+   * 地图
+   * @param {Object} wCtx 
+   * @param {Object} gCtx 
+   */
   constructor(wCtx, gCtx) {
     this.wallCtx = wCtx;
     this.grassCtx = gCtx;
@@ -18,6 +23,10 @@ export default class {
   homeSize = 32; //家图标的大小
   mapWidth = 416;
   mapHeight = 416;
+  /**
+   * 设置地图等级
+   * @param {Number} level 
+   */
   setMapLevel(level) {
     this.level = level;
     let tempMap = LEVEL[this.level - 1];
@@ -84,7 +93,7 @@ export default class {
   }
   /**
    * 画右侧敌方坦克数
-   * @param enemyNum 地方坦克总数
+   * @param {Number} enemyNum 地方坦克总数
    */
   drawEnemyNum(enemyNum) {
     let x = 466;
@@ -101,8 +110,8 @@ export default class {
   }
   /**
    * 清除右侧敌方坦克数，从最下面开始清楚
-   * @param totolEnemyNum 敌方坦克的总数
-   * @param enemyNum 已出现的敌方坦克数
+   * @param {Number} totolEnemyNum 敌方坦克的总数
+   * @param {Number} enemyNum 已出现的敌方坦克数
    */
   clearEnemyNum(totolEnemyNum, enemyNum) {
     if (enemyNum <= 0) return;
@@ -114,8 +123,8 @@ export default class {
   }
   /**
    * 画坦克的生命数
-   * @param lives 生命数
-   * @param which 坦克索引，1、代表玩家1  2、代表玩家2
+   * @param {Number} lives 生命数
+   * @param {Number} which 坦克索引，1、代表玩家1  2、代表玩家2
    */
   drawLives(lives, which) {
     let x = 482;
@@ -128,8 +137,8 @@ export default class {
   }
   /**
    * 更新地图
-   * @param indexArr 需要更新的地图索引数组，二维数组，如[[1,1],[2,2]]
-   * @param target 更新之后的数值
+   * @param {Array} indexArr 需要更新的地图索引数组，二维数组，如[[1,1],[2,2]]
+   * @param {Number} target 更新之后的数值
    */
   updateMap(indexArr, target) {
     if (indexArr != null && indexArr.length > 0) {
@@ -157,6 +166,7 @@ export default class {
       }
     }
   }
+  // 大本营被毁
   homeHit() {
     this.wallCtx.drawImage(
       IMAGE.RESOURCE,

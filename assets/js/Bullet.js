@@ -2,20 +2,26 @@ import CrackAnimation from "./CrackAnimation.js";
 import { IMAGE, POS, DIR, CRACK_TYPE, BULLET_TYPE, AUDIO } from "./const.js";
 import { bulletArray, enemyArray, player, map, crackArray } from "./main.js";
 import { CheckIntersect, bulletMapCollision } from "./Collision.js";
+import Tank from "./Tank.js";
+import Obj from "./Obj.js";
 
-export default class {
+export default class extends Obj {
+  /**
+   * 子弹类
+   * @param {Object} context 
+   * @param {Tank} owner 
+   * @param {Number} type 
+   * @param {Number} dir 
+   */
   constructor(context, owner, type, dir) {
+    super(6, 3);
     this.ctx = context;
     this.owner = owner; // 子弹的所属者
     this.type = type; // 1、玩家  2、敌方
     this.dir = dir;
   }
-  x = 0;
-  y = 0;
   hit = !1;
   isDestroyed = !1;
-  speed = 3;
-  size = 6;
   draw() {
     this.ctx.drawImage(
       IMAGE.RESOURCE,

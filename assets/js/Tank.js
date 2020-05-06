@@ -3,17 +3,17 @@ import CrackAnimation from "./CrackAnimation.js";
 import { DIR, AUDIO, CRACK_TYPE } from "./const.js";
 import { crackArray, bulletArray, emenyStopTime, map } from "./main.js";
 import { tankMapCollision } from "./Collision.js";
+import Obj from "./Obj.js";
 
 let { UP, DOWN, LEFT, RIGHT } = DIR;
 // 坦克基类
-export default class {
-  x = 0;
-  y = 0;
+export default class extends Obj {
+  constructor() {
+    super(32/* 坦克的大小 */, 1/* 坦克的速度 */);
+  }
   hit = !1; // 是否碰到墙或者坦克
   isDestroyed = !1;
-  size = 32; // 坦克的大小
   dir = UP; // 方向0：上 1：下 2：左3：右
-  speed = 1; // 坦克的速度
   frame = 0; // 控制敌方坦克切换方向的时间
   isAI = !1; // 是否自动
   isShooting = !1; // 子弹是否在运行中
@@ -87,7 +87,10 @@ export default class {
   }
   // 是否被击中
   isShot() { }
-  // 射击
+  /**
+   * 射击
+   * @param {Number} type 
+   */
   shoot(type) {
     if (this.isAI && emenyStopTime > 0 || this.isShooting)
       return;

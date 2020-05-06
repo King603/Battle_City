@@ -1,13 +1,16 @@
 import { DIR, MAP } from "./const.js";
 import { isGameOver, map } from "./main.js";
+import Tank from "./Tank.js";
+import Bullet from "./Bullet.js";
+import Map from "./Map.js";
 
 let { UP, DOWN, LEFT, RIGHT } = DIR;
 let { WALL, GRID, WATER, HOME, ANOTHREHOME } = MAP;
 /**
  * 检测2个物体是否碰撞
- * @param object1 物体1
- * @param object2 物体2
- * @param overlap 允许重叠的大小
+ * @param {Object} object1 物体1
+ * @param {Object} object2 物体2
+ * @param {Number} overlap 允许重叠的大小
  * @returns {Boolean} 如果碰撞了，返回!0
  */
 export function CheckIntersect(object1, object2, overlap) {
@@ -35,8 +38,8 @@ export function CheckIntersect(object1, object2, overlap) {
 }
 /**
  * 坦克与地图块碰撞
- * @param tank 坦克对象
- * @param mapObj 地图对象
+ * @param {Tank} tank 坦克对象
+ * @param {Map} mapObj 地图对象
  * @returns {Boolean} 如果碰撞，返回!0
  */
 export function tankMapCollision(tank, mapObj) {
@@ -104,8 +107,9 @@ export function tankMapCollision(tank, mapObj) {
 }
 /**
  * 子弹与地图块的碰撞
- * @param bullet 子弹对象
- * @param mapobj 地图对象
+ * @param {Bullet} bullet 子弹对象
+ * @param {Map} mapobj 地图对象
+ * @param {Boolean} 
  */
 export function bulletMapCollision(bullet, mapobj) {
   let tileNum = 0; // 需要检测的tile数

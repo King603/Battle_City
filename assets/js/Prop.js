@@ -3,6 +3,10 @@ import { IMAGE, POS, AUDIO, MAP } from "./const.js";
 import { CheckIntersect } from "./Collision.js";
 
 export default class {
+  /**
+   * 
+   * @param {Object} context 
+   */
   constructor(context) {
     this.ctx = context;
   }

@@ -10,6 +10,10 @@ export const IMAGE = {
   MENU: getImg(image_src + "menu.gif"),
   RESOURCE: getImg(image_src + "tankAll.gif")
 };
+/**
+ * 获取图片
+ * @param {String} href 路径
+ */
 function getImg(href) {
   let img = new Image();
   img.src = href;

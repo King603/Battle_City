@@ -1,11 +1,11 @@
 import Tank from "./Tank.js";
 import { IMAGE, POS } from "./const.js";
 
-/**
- * 敌方坦克父类
- * @param context
- */
 export default class extends Tank {
+  /**
+   * 敌方坦克父类
+   * @param {Object} context
+   */
   constructor(context) {
     super();
     this.ctx = context;
@@ -13,6 +13,12 @@ export default class extends Tank {
   isAppear = !1;
   times = 0;
   isAI = !0;
+  /**
+   * 画图
+   * @param {Number} times 时间
+   * @param {Number} enemy_1 敌军数据
+   * @param {Number} enemy_2 敌军数据
+   */
   allDraw(times, enemy_1, enemy_2) {
     this.times++;
     let data = [this.size, this.size, this.x, this.y, this.size, this.size];

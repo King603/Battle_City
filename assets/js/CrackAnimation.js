@@ -1,9 +1,16 @@
 import { CRACK_TYPE, IMAGE, POS } from "./const.js";
+import Obj from "./Obj.js";
 
 export default class {
   times = 0;
   isOver = !1;
   tempDir = 1;
+  /**
+   * 裂纹动画
+   * @param {String} type 
+   * @param {Object} context 
+   * @param {Obj} crackObj 
+   */
   constructor(type, context, crackObj) {
     this.ctx = context;
     this.owner = crackObj;
@@ -14,6 +21,7 @@ export default class {
     this.x = crackObj.x + size;
     this.y = crackObj.y + size;
   }
+  // 画图
   draw() {
     let gaptime = 3;
     this.ctx.drawImage(

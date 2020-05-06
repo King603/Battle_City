@@ -1,8 +1,11 @@
 import { SCREEN, IMAGE, POS } from "./const.js";
 import SelectTank from "./SelectTank.js";
 
-// 游戏开始菜单
 export default class {
+  /**
+   * 游戏开始菜单
+   * @param {Object} context 
+   */
   constructor(context) {
     this.ctx = context;
   }
@@ -24,7 +27,10 @@ export default class {
     this.ctx.drawImage(IMAGE.RESOURCE, POS.selectTank[0], POS.selectTank[1] + temp, this.selectTank.size, this.selectTank.size, this.selectTank.x, this.y + this.selectTank.ys[this.playNum - 1], this.selectTank.size, this.selectTank.size);
     this.ctx.restore();
   }
-  // 选择坦克上下移动
+  /**
+   * 选择坦克上下移动
+   * @param {Number} n 
+   */
   next(n) {
     if ((this.playNum += n) > 2) this.playNum = 1;
     else if (this.playNum < 1) this.playNum = 2;

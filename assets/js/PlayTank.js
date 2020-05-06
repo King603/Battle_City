@@ -2,12 +2,13 @@ import Tank from "./Tank.js";
 import { IMAGE, POS, AUDIO, CRACK_TYPE, DIR } from "./const.js";
 import { crackArray, map } from "./main.js";
 import CrackAnimation from "./CrackAnimation.js";
-/**
- * 玩家坦克
- * @param context 画坦克的画布
- * @returns
- */
+
 export default class extends Tank {
+  /**
+   * 玩家坦克
+   * @param {Object} context 画坦克的画布
+   * @returns
+   */
   constructor(context) {
     super();
     this.ctx = context;
@@ -51,6 +52,10 @@ export default class extends Tank {
     crackArray.push(new CrackAnimation(CRACK_TYPE.TANK, this.ctx, this));
     AUDIO.DESTROY.PLAYER.play();
   }
+  /**
+   * 
+   * @param {Number} player 
+   */
   renascenc(player) {
     this.lives--;
     this.dir = DIR.UP;

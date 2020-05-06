@@ -13,6 +13,10 @@ export default class {
   temp = 0;
   dir = 1; //中间切换的方向，1：合上，2：展开
   isReady = !1; //标识地图是否已经画好
+  /**
+   * 初始化
+   * @param {Number} level 
+   */
   init(level) {
     this.dir = 1;
     this.isReady = !1;

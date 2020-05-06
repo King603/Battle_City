@@ -1,10 +1,20 @@
 import { IMAGE, POS } from "./const.js";
 
 export default class {
+  /**
+   * 数量类
+   * @param {Object} context 
+   */
   constructor(context) {
     this.ctx = context;
     this.size = 14;
   }
+  /**
+   * 绘制
+   * @param {Number} num 
+   * @param {Number} x 
+   * @param {Number} y 
+   */
   draw(num, x, y) {
     let tempX = x;
     let tempY = y;
