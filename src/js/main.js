@@ -1,3 +1,6 @@
+import "../../node_modules/jquery/dist/jquery.js";
+import "../../public/js/Helper.js";
+
 import Menu from "./Menu.js";
 import Stage from "./Stage.js";
 import Map from "./Map.js";

@@ -1,0 +1,22 @@
+{
+  "name": "battle_city",
+  "version": "1.2.0",
+  "description": "HTML5 canvas高仿小霸王坦克大战",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/King603/Battle_City.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/King603/Battle_City/issues"
+  },
+  "homepage": "https://github.com/King603/Battle_City#readme",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}
